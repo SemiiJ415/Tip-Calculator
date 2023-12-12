@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="header" id="header">
-        <div class="container">
+        <div class="container text-center">
             <h1>Tip Calculator</h1>
             <p class="intro-text">By Jarissa</p>
         </div>
@@ -18,11 +18,19 @@
     <main class="main" id="main">
         <section class="menu-section">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-3">[item]</div>
-                    <div class="col-md-3">[item]</div>
-                    <div class="col-md-3">[item]</div>
-                    <div class="col-md-3">[item]</div>
+                <h2 class="menu-heading text-capitalize text-center">our menu</h2>
+                <div class="menu-div" id="appetizerDiv">
+                    <!-- <h3 class="menu-subheading text-capitalize">our appetizers</h3> -->
+                    <!-- <div class="row" id="appRow"></div> -->
+                </div>
+                <div class="menu-div" id="entreeDiv">
+                    <!-- <div class="row" id="entreeRow"></div> -->
+                </div>
+                <div class="menu-div" id="drinkDiv">
+                    <!-- <div class="row" id="drinkDiv"></div> -->
+                </div>
+                <div class="menu-div" id="dessertDiv">
+                    <!-- <div class="row" id="dessertDiv"></div> -->
                 </div>
             </div>
         </section>
@@ -30,23 +38,40 @@
             <div class="container">
                 <div class="row">
                     <div class="col-6">
-                        <form action="#">
-                            <h2 class="form-heading">your subtotal:</h2>
-                            <input type="number" value="" min="0" class="mb-3">
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Choose Tip</button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#" class="dropdown-item"></a>10%</li>
-                                    <li><a href="#" class="dropdown-item"></a>15%</li>
-                                    <li><a href="#" class="dropdown-item"></a>18%</li>
-                                    <li><a href="#" class="dropdown-item"></a>22%</li>
-                                    <li><a href="#" class="dropdown-item"></a>other amount</li>
-                                    
-                                </ul>
-                            </div>
-                            <label for="otherAmt">For other amount:</label>
-                            <input type="number" value="" id="otherAmt">
-                        </form>
+                        <div class="subtotal-div">
+                            <form action="#">
+                                <h2 class="form-heading text-capitalize">your subtotal: $<span id="cartSubtotal">0.00</span></h2>
+                                <select name="tipAmt" id="tipAmt">
+                                    <option value="">Choose Tip</option>
+                                    <option value=".1">10%</option>
+                                    <option value=".15">15%</option>
+                                    <option value=".18">18%</option>
+                                    <option value=".22">22%</option>
+                                </select>
+                                <label for="otherAmt">For other amount:</label>
+                                <input type="number" value="0" id="otherAmt" min="0" class="mb-3">
+                                    <button class="btn btn-primary text-capitalize" id="confirmBtn">confirm tip</button>
+                            </form>
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="ticket-div">
+                            <h2 class="text-capitalize text-center">Your receipt:</h2>
+                            <ul class="receipt" id="receipt"></ul>
+                            <p class="text-end">
+                                Subtotal: $<span id="yourSubtotal">0.00</span>
+                            </p>
+                            <p class="text-end">
+                                Tax: $<span id="tax">0.00</span>
+                            </p>
+                            <p class="text-end tip-total" id="tipTotal">
+                                Tip: $<span id="yourTip">0.00</span>
+                            </p>
+                            <p class="total-text text-end">Total Bill: 
+                                $<span id="total">0.00</span>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -54,7 +79,9 @@
     </main>
 
     <footer class="footer" id="footer">
-        <p class="colophon">site by &;SemiiJ</p>
+        <div class="container">
+            <p class="colophon text-center">site by &;SemiiJ</p>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
