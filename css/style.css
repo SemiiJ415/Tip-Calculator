@@ -2,18 +2,43 @@
     box-sizing: border-box;
 }
 
+/* :root {
+    font-family: 'Kalnia', serif;
+} */
+
 body {
     margin: 0;
     padding: 0;
-    background-color: powderblue;
+    background-color: #89cff0;
 
 }
 
 .header {
     margin-bottom: 10px;
-    padding: 10px 0;
-    background-color: blanchedalmond;
-    border-bottom: 3px solid burlywood;
+    padding: 5px 0;
+    background-image: linear-gradient(to bottom right, #89cff0, #ffebcd, #dda0dd);
+    border-bottom: 3px double burlywood;
+}
+h1 {
+    font-family: 'Kalnia', serif;
+    font-size: 56px;
+    color: black;
+}
+.menu-heading {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+h2, h3 {
+    margin: 15px;
+    font-family: 'Kalnia', serif;
+    font-size: 36px;
+    color: black;
+    border: 2px solid black;
+    border-radius: 10%;
+}
+
+p {
+    color: black;
 }
 
 .main {
@@ -40,6 +65,20 @@ body {
     border: 1px solid black;
 }
 
+#receiptTable {
+    width: 100%;
+}
+
+.cart-btn{
+    background-color: plum;
+    color: black;
+    border: 3px double black;
+}
+.cart-btn:hover {
+    background-color: green;
+    color: #89cff0;
+    border: 3px solid black;
+}
 .footer {
     padding: 10px 0;
 }
